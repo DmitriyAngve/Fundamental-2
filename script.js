@@ -367,34 +367,42 @@
 //   console.log(`Lifting weights repetition ${rep}`);
 // }
 
-const dmitriy = [
-  "Dmitriy",
-  "Angve",
-  2037 - 1988,
-  "student",
-  ["Michael", "Peter", "Steven"],
-  true,
-];
+// const dmitriy = [
+//   "Dmitriy",
+//   "Angve",
+//   2037 - 1988,
+//   "student",
+//   ["Michael", "Peter", "Steven"],
+//   true,
+// ];
 
-const types = [];
+// const types = [];
 
-for (let i = 0; i < dmitriy.length; i++) {
-  console.log(dmitriy[i], typeof dmitriy[i]);
+// for (let i = 0; i < dmitriy.length; i++) {
+//   console.log(dmitriy[i], typeof dmitriy[i]);
 
-  //Filling types array
-  //   types[i] = typeof dmitriy[i];
-  types.push(typeof dmitriy[i]);
-}
+//   //Filling types array
+//   //   types[i] = typeof dmitriy[i];
+//   types.push(typeof dmitriy[i]);
+// }
 
-console.log(types);
-const years = [1991, 2007, 1969, 2020];
-const ages = [];
-for (let i = 0; i < years.length; i++) {
-  ages.push(2037 - years[i]);
-}
-console.log(ages);
+// console.log(types);
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i]);
+// }
+// console.log(ages);
 
-//continue and break
-for (let i = 0; i < dmitriy.length; i++) {
-  console.log(dmitriy[i], typeof dmitriy[i]);
-}
+// //continue and break
+// console.log("---ONLY STRINGS---");
+// for (let i = 0; i < dmitriy.length; i++) {
+//   if (typeof dmitriy[i] !== "string") continue;
+//   console.log(dmitriy[i], typeof dmitriy[i]);
+// }
+
+// console.log("---BREAK WITH NUMBER---");
+// for (let i = 0; i < dmitriy.length; i++) {
+//   if (typeof dmitriy[i] === "number") break;
+//   console.log(dmitriy[i], typeof dmitriy[i]);
+// }
