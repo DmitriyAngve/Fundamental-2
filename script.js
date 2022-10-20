@@ -281,3 +281,35 @@
 // console.log(
 //   `${dmitriy.firstName} has ${dmitriy.friends.length}  friends and his best friend is called ${dmitriy.friends[0]}`
 // );
+
+// const dmitriy = {
+//   firstName: "Dmitriy",
+//   lastName: "Angve",
+//   birthYear: 1988,
+//   job: "student",
+//   friends: ["Michael", "Peter", "Steven"],
+//   hasDriversLicence: true,
+
+//   calcAge: function (birthYear) {
+//     return 2037 - birthYear;
+//   },
+
+//   calcAge: function () {
+//     // console.log(this);
+//     return 2037 - this.birthYear;
+//   },
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear; //create new property dmitriy.age
+//     return this.age;
+//   },
+
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${
+//       this.job
+//     }, and he has ${this.hasDriversLicence ? "a" : "no"} drivers's licence`;
+//   },
+// };
+
+// console.log(dmitriy.calcAge(1988));
+
+// console.log(dmitriy.getSummary());
