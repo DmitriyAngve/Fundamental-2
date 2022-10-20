@@ -226,3 +226,58 @@
 // const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 // console.log(bills, tips, totals);
+
+// const dmitriyArray = [
+//   "Dmitriy",
+//   "Angve",
+//   2037 - 1988,
+//   "student",
+//   ["Michael", "Peter", "Steven"],
+// ];
+
+// const dmitriy = {
+//   firstName: "Dmitriy",
+//   lastName: "Angve",
+//   age: 2037 - 1988,
+//   job: "student",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
+
+// const dmitriy = {
+//   firstName: "Dmitriy",
+//   lastName: "Angve",
+//   age: 2037 - 1988,
+//   job: "student",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
+// console.log(dmitriy);
+
+// console.log(dmitriy.lastName); // dot notation
+// console.log(dmitriy["lastName"]); // bracket notation
+
+// const nameKey = "Name";
+// console.log(dmitriy["first" + nameKey]);
+// console.log(dmitriy["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "What do you want to know about Dmitriy? Choose between firstName, lastName, age, job and friends"
+// );
+
+// if (dmitriy[interestedIn]) {
+//   console.log(dmitriy[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request! Choose between firstName, lastName, age, job and friends"
+//   );
+// }
+
+// dmitriy.location = "Portugal";
+// dmitriy["twitter"] = "@angve";
+// console.log(dmitriy);
+
+// //Challenge
+
+// dmitriy.friends["Michael"] = "Best friend";
+// console.log(
+//   `${dmitriy.firstName} has ${dmitriy.friends.length}  friends and his best friend is called ${dmitriy.friends[0]}`
+// );
