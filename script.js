@@ -313,3 +313,39 @@
 // console.log(dmitriy.calcAge(1988));
 
 // console.log(dmitriy.getSummary());
+
+// Challenge
+// const mark = {
+//   fullName: "Mark Smith",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     return (this.bmi = this.mass / this.height ** 2);
+//   },
+// };
+
+// const john = {
+//   fullName: "John Miller",
+//   mass: 72,
+//   height: 1.55,
+//   calcBMI: function () {
+//     return (this.bmi = this.mass / this.height ** 2);
+//   },
+// };
+// console.log(mark.calcBMI());
+// console.log(john.calcBMI());
+// console.log(mark.bmi);
+
+// if (mark.bmi > john.bmi) {
+//   console.log(
+//     `${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${
+//       john.fullName
+//     }'s (${john.calcBMI()})!`
+//   );
+// } else {
+//   console.log(
+//     `${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${
+//       mark.fullName
+//     }'s (${mark.calcBMI()})!`
+//   );
+// }
