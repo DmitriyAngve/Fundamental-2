@@ -406,3 +406,26 @@
 //   if (typeof dmitriy[i] === "number") break;
 //   console.log(dmitriy[i], typeof dmitriy[i]);
 // }
+
+// const dmitriy = [
+//   "Dmitriy",
+//   "Angve",
+//   2037 - 1988,
+//   "student",
+//   ["Michael", "Peter", "Steven"],
+//   true,
+// ];
+// // 0, 1, ..., 4
+// // 4, 3, ..., 0
+
+// for (let i = dmitriy.length - 1; i >= 0; i--) {
+//   console.log(i, dmitriy[i]);
+// }
+
+// // loop inside the loop
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`---------Starting ${exercise}`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+//   }
+// }
