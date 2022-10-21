@@ -448,31 +448,245 @@
 //   if (dice === 6) console.log("Loop is about to end...");
 // }
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
+// ---------------------CODEWARS DAY #1-----------------------
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-};
+// ---------------------FIRST KATA-----------------------------
+/*
+Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
 
-for (let i = 0; i < bills.length; i++) {
-  const tip = calcTip(bills[i]);
-  tips.push(tip);
-  totals.push(tip + bills[i]);
-}
+If you want to know more: http://en.wikipedia.org/wiki/DNA
 
-console.log(bills, tips, totals);
+In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
 
-//Bonus challenge
-const arr = [1, 2, 3, 4];
+More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
 
-const calcAverage = function (arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+Example: (input --> output)
+
+"ATTGC" --> "TAACG"
+"GTAT" --> "CATA"
+*/
+
+// First solution
+/*
+let dna = "ACGT";
+function DNAStrand(dna) {
+  let result = "";
+  for (let i = 0; i < dna.length; i++) {
+    if (dna[i] === "A") {
+      result += "T";
+    } else if (dna[i] === "T") {
+      result += "A";
+    } else if (dna[i] === "C") {
+      result += "G";
+    } else if (dna[i] === "G") {
+      result += "C";
+    } else {
+      result += dna[i];
+    }
   }
-  return sum / arr.length;
-};
-console.log(calcAverage(totals));
-console.log(calcAverage(tips));
+  return result;
+}
+console.log(DNAStrand(dna));
+*/
+
+// Second solution
+/*
+let dna = "ACGT";
+let pairs = { A: "T", T: "A", C: "G", G: "C" };
+const DNAStrand = (dna) => dna.replace(/./g, (е) => pairs[е]); // str.replace(regexp|substr, newSubstr|function[,flags]). /./g - каждый символ g - глобальное сопоставление
+console.log(DNAStrand(dna));
+*/
+
+// ---------------------SECOND KATA---------------------------
+/*
+Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+
+Note: a and b are not ordered!
+Examples (a, b) --> output (explanation)
+
+(1, 0) --> 1 (1 + 0 = 1)
+(1, 2) --> 3 (1 + 2 = 3)
+(0, 1) --> 1 (0 + 1 = 1)
+(1, 1) --> 1 (1 since both are same)
+(-1, 0) --> -1 (-1 + 0 = -1)
+(-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+*/
+
+// First solution !!!!RECOURSION!!!!
+// function getSum(a, b) {
+//   if (a === b) {
+//     return a;
+//   } else if (a < b) {
+//     return a + getSum(a + 1, b);
+//   } else {
+//     return a + getSum(a - 1, b);
+//   }
+// }
+// console.log(getSum(-2, 2));
+
+//Second solution
+// function getSum(a, b) {
+//   return ((a + b) * (Math.abs(a - b) + 1)) / 2;
+// }
+// console.log(getSum(-2, 1));
+
+// ---------------------THIRD KATA---------------------------
+
+/*
+Complete function saleHotdogs/SaleHotDogs/sale_hotdogs, function accept 1 parameters:n, n is the number of customers to buy hotdogs, different numbers have different prices (refer to the following table), return a number that the customer need to pay how much money.
+number 	                          price (cents)
+n < 5 	                          100
+n >= 5 and n < 10 	              95
+n >= 10 	                        90
+*/
+
+//First solution
+// function saleHotdogs(n) {
+//   if (n < 5) {
+//     return 100 * n;
+//   } else if (n >= 5 && n < 10) {
+//     return 95 * n;
+//   } else if (n >= 10) {
+//     return 90 * n;
+//   }
+// }
+// console.log(saleHotdogs(11));
+
+//Second solution Ternary operator
+// function saleHotdogs(n) {
+//   return n * (n < 5 ? 100 : n < 10 ? 95 : 90);
+// }
+// console.log(saleHotdogs(11));
+
+// ---------------------FOURTH KATA---------------------------
+
+/*
+Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+
+Example: (Input1, Input2 -->Output)
+
+"4",  "5" --> "9"
+"34", "5" --> "39"
+"", "" --> "0"
+"2", "" --> "2"
+"-5", "3" --> "-2"
+
+Notes:
+
+    If either input is an empty string, consider it as zero.
+
+*/
+
+//First solution
+// function sumStr(a, b) {
+//   return String(Number(a) + Number(b));
+// }
+// console.log(sumStr("", ""));
+
+//Second solution
+// const sumStr = (a, b) => String(+a + +b);
+// console.log(sumStr(1, 2));
+
+// ---------------------FOURTH KATA---------------------------
+
+/*
+In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+Examples
+
+makeNegative(1);    // return -1
+makeNegative(-5);   // return -5
+makeNegative(0);    // return 0
+makeNegative(0.12); // return -0.12
+
+Notes
+
+    The number can be negative already, in which case no change is required.
+    Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense
+*/
+
+//First solution
+// function makeNegative(num) {
+//   return num < 0 ? num : num * -1;
+// }
+// console.log(makeNegative(-1));
+
+//Second solutiom
+// function makeNegative(num) {
+//   return Math.abs(num);
+// }
+
+// ---------------------FIFTH KATA-----------------------
+
+//First solution
+// const number = function (busStops) {
+//   let sumPeople = 0;
+//   for (let stop of busStops) {
+//     sumPeople += stop[0] - stop[1];
+//   }
+//   return sumPeople;
+// };
+
+//Second solution
+// const number = (busStops) =>
+//   busStops.reduce((people, stop) => people + stop[0] - stop[1]);
+// // array.reduce(callback[, initialValue])
+
+// ---------------------SIXTH KATA-----------------------
+/*
+Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+
+(In this case, all triangles must have surface greater than 0 to be accepted).
+
+*/
+// First solution
+// function isTriangle(a, b, c) {
+//   return a < b + c && b < a + c && c < a + b;
+// }
+// console.log(isTriangle(3, 4, 5));
+
+// ---------------------SEVENTH KATA----------------------
+/*
+Write a function that checks if a given string (case insensitive) is a palindrome. Palindrome is 
+*/
+
+// First solution
+
+// function isPalindrome(x) {
+//   y = x.split("").reverse().join("");
+//   if (x.toLowerCase() === y.toLowerCase()) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(isPalindrome("ABbA"));
+
+// Second solution with arrow function
+// const isPalindrome = x => x.toLowerCase() === x.toLowerCase().split('').reverse().join('');
+
+// ---------------------EIGHTH KATA----------------------
+/*
+Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+The output should be two capital letters with a dot separating them.
+
+It should look like this:
+
+Sam Harris => S.H
+
+patrick feeney => P.F
+
+*/
+
+// First solution
+
+// function abbrevName(fullName) {
+//   return fullName
+//     .split(" ")
+//     .map((i) => i[0].toUpperCase())
+//     .join(".");
+// }
+// // split разделяет строку на подстроки по сепаратору ("пробел")
+// // map создает новый массив путём применения к каждому элементу старого массива функцию (i[0].toUpperCase())
+// // join объединяет элементы массива после map в строку с сепаратором (".")
+// console.log(abbrevName("Harry Potter"));
